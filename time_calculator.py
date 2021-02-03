@@ -23,7 +23,6 @@ def add_time(start, duration, weekday=None):
                     start_minutes = minute[0]
                     period_of_day = 'AM'
 
-
     # Break down the duration
     for hours in duration:
         if hours == ':':
