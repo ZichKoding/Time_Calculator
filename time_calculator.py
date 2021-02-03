@@ -19,7 +19,7 @@ def add_time(start, duration, weekday=None):
                     period_of_day = 'PM'
                     start_hour = (int(start_hour) + 12)
                 if minutes == 'A':
-                    minute = break_time[1].split(' ')
+                    minute = break_time[1].split('A')
                     start_minutes = minute[0]
                     period_of_day = 'AM'
 
