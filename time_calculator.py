@@ -6,21 +6,23 @@ def add_time(start, duration, weekday=None):
         for day_o_week in day_of_week:
             if weekday == day_o_week:
                 weekday = day_of_week.index(weekday)
-
+                
     # breaking down the start time for ease of use later.
     for t in start:
         if t == ":":
             break_time = start.split(':')
             start_hour = break_time[0]
             for minutes in break_time[1]:
-                if minutes == ' ':
-                    minute = break_time[1].split(' ')
-                    start_minutes = minute[0]
                 if minutes == 'P':
+                    minute = break_time[1].split('P')
+                    start_minutes = minute[0]
                     period_of_day = 'PM'
                     start_hour = (int(start_hour) + 12)
                 if minutes == 'A':
+                    minute = break_time[1].split(' ')
+                    start_minutes = minute[0]
                     period_of_day = 'AM'
+
 
     # Break down the duration
     for hours in duration:
